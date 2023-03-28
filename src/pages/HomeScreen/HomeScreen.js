@@ -43,7 +43,7 @@ function HomeScreen() {
         title="Documentaries"
         fetchUrl={requests.fetchDocumentaries}
       />
-    </div>
+    </div >
   )
 }
 
