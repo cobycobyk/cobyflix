@@ -66,6 +66,10 @@ function PlansScreen() {
   
   return (
     <div className='plansScreen'>
+      <br />
+      {subscription &&
+        <p>Renewal Date: {new Date(subscription?.current_period_end * 1000).toLocaleDateString()}</p>
+      }
       {Object.entries(products).map(([productId, productData]) => {
         // TODO add logic if user sub is active
         const isCurrentPackage = productData.name?.toLowerCase().includes(subscription?.role.concat(" plan"));
